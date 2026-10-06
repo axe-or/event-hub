@@ -1,0 +1,17 @@
+{
+	"name": "@mmf/eventhub",
+	"version": "0.1.0",
+	"exports": "./src/index.ts",
+	"compilerOptions": {
+		"lib": ["deno.window", "esnext.disposable"],
+		"strict": true
+	},
+	"publish": {
+		"include": ["src", "README.md", "deno.json"]
+	},
+	"fmt": {
+		"useTabs": true,
+		"lineWidth": 120
+	},
+	"exclude": ["dist", ".test-build", "node_modules"]
+}

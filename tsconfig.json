@@ -1,0 +1,23 @@
+{
+	// Type-checks everything (library, tests, benches, examples). tsconfig.build.json emits only src/.
+	"compilerOptions": {
+		"target": "ES2022",
+		"module": "NodeNext",
+		"moduleResolution": "NodeNext",
+		// No DOM: the library must only use APIs every runtime has. AbortSignal, queueMicrotask and
+		// console come from @types/node here, which are the same shapes Deno, Bun and browsers provide.
+		"lib": ["ES2022", "ESNext.Disposable"],
+		"types": ["node"],
+		"strict": true,
+		"noUncheckedIndexedAccess": false,
+		"noImplicitOverride": true,
+		"exactOptionalPropertyTypes": false,
+		"verbatimModuleSyntax": true,
+		"isolatedModules": true,
+		"allowImportingTsExtensions": true,
+		"rewriteRelativeImportExtensions": true,
+		"noEmit": true,
+		"skipLibCheck": false
+	},
+	"include": ["src", "test", "bench", "examples"]
+}

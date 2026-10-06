@@ -1,0 +1,15 @@
+{
+	"extends": "./tsconfig.json",
+	"compilerOptions": {
+		"noEmit": false,
+		"rootDir": "src",
+		"outDir": "dist",
+		"declaration": true,
+		"declarationMap": true,
+		"sourceMap": true,
+		// No Node typings: host APIs come only from types/host-globals.d.ts, so the published .d.ts
+		// can't leak Node types and the library can't quietly depend on a Node-only API.
+		"types": []
+	},
+	"include": ["src", "types"]
+}
